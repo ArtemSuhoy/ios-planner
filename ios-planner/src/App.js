@@ -5,7 +5,9 @@ import { Switcher } from "./components/Switcher"
 import { IconModule } from "./components/IconModule"
 import { Input } from "./components/Input"
 import { Checkbox } from "./components/Checkbox"
-
+import { Container } from "./components/Grid/Container"
+import { Row } from "./components/Grid/Row"
+import { Col } from "./components/Grid/Col"
 import { AiOutlineUnorderedList, AiOutlineSearch } from "react-icons/ai"
 import { BsCircle, BsFlagFill } from "react-icons/bs"
 
@@ -121,6 +123,34 @@ const App = () => {
         </div>
       </div>
 
+      <Container size="lg">
+        <Row>
+          <Col xl={2} md={3}>
+            1.1
+          </Col>
+          <Col xl={2} md={3}>
+            1.2
+          </Col>
+          <Col xl={4} md={3}>
+            1.3
+          </Col>
+          <Col xl={4} md={3}>
+            1.4
+          </Col>
+        </Row>
+        <Row>
+          <Col>2.1</Col>
+          <Col>2.2</Col>
+          <Col>2.3</Col>
+          <Col>2.4</Col>
+        </Row>
+        <Row>
+          <Col>3.1</Col>
+          <Col>3.2</Col>
+          <Col>3.3</Col>
+          <Col>3.4</Col>
+        </Row>
+      </Container>
       <Switcher counter="5" title="All" icons={<BsFlagFill />} />
     </div>
   )
