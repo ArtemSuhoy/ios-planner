@@ -1,0 +1,53 @@
+$SIZE_MAP: (
+  xs: 4px,
+  ms: 8px,
+  sm: 12px,
+  md: 16px,
+  lg: 20px,
+  xl: 24px,
+  xxl: 28px,
+);
+
+@each $type, $size in $SIZE_MAP {
+  .m-#{$type} {
+    margin: $size !important;
+  }
+}
+
+@each $type, $size in $SIZE_MAP {
+  .mt-#{$type} {
+    margin-top: $size !important;
+  }
+}
+
+@each $type, $size in $SIZE_MAP {
+  .mr-#{$type} {
+    margin-right: $size !important;
+  }
+}
+
+@each $type, $size in $SIZE_MAP {
+  .mb-#{$type} {
+    margin-bottom: $size !important;
+  }
+}
+
+@each $type, $size in $SIZE_MAP {
+  .ml-#{$type} {
+    margin-left: $size !important;
+  }
+}
+
+@each $type, $size in $SIZE_MAP {
+  .mx-#{$type} {
+    margin-left: $size !important;
+    margin-right: $size !important;
+  }
+}
+
+@each $type, $size in $SIZE_MAP {
+  .my-#{$type} {
+    margin-top: $size !important;
+    margin-bottom: $size !important;
+  }
+}
