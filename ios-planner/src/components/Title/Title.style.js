@@ -1,6 +1,7 @@
 import styled, { css } from "styled-components"
 
 const TitleStyle = styled.div`
+  color: var(${props => props.color});
   ${props => {
     switch (props.level) {
       case 1:
@@ -24,6 +25,11 @@ const TitleStyle = styled.div`
           font-size: 16px;
           line-height: 24px;
         `
+      case 6:
+        return css`
+          font-size: 12px;
+          line-height: 20px;
+        `
 
       default:
         return css`
@@ -31,7 +37,7 @@ const TitleStyle = styled.div`
           line-height: 28px;
         `
     }
-  }}
+  }};
 `
 
 export default TitleStyle

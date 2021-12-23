@@ -1,4 +1,4 @@
 import Button from "./Button"
-import ButtonStyled from "./Button.style"
+import { ButtonStyled, IconWrapper } from "./Button.style"
 
-export { Button, ButtonStyled }
+export { Button, ButtonStyled, IconWrapper }

@@ -1,19 +1,25 @@
 import styled from "styled-components"
+import { VARIANT_MAP } from "."
 
 const SwitcherStyle = styled.div`
-  display: flex;
-  align-items: start;
-  width: 100%;
-  max-width: 200px;
-  color: #fff;
-  background-color: #5f5f5f;
+  ${props =>
+    props.isActive
+      ? VARIANT_MAP.default[props.variant]
+      : ` color: #fff;
+     background-color: #5f5f5f;`}
+
   border-radius: 12px;
-  padding: 10px;
-  justify-content: space-between;
+  padding: 12px;
 
   &:hover {
-    background-color: #5b626a;
+    opacity: 0.8;
   }
 `
 
-export default SwitcherStyle
+const SwitcherWrapper = styled.div`
+  padding: 6px 0px;
+  width: 100%;
+  min-width: 100px;
+`
+
+export { SwitcherStyle, SwitcherWrapper }

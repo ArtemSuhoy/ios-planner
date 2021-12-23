@@ -1,4 +1,4 @@
 import Container from "./Container"
-import ContainerStyle from "./Container.style"
+import ContainerStyled from "./Container.styled"
 
-export { Container, ContainerStyle }
+export { Container, ContainerStyled }

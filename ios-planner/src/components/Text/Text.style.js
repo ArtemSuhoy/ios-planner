@@ -1,7 +1,8 @@
 import styled, { css } from "styled-components"
 
-const TextStyle = styled.p`
+const TextStyle = styled.div`
   margin: 0px;
+  color: inherit;
   ${props => {
     switch (props.size) {
       case "sm":
@@ -15,6 +16,7 @@ const TextStyle = styled.p`
           font-size: 20px;
           line-height: 28px;
         `
+
       case "xl":
         return css`
           font-size: 24px;
@@ -27,7 +29,7 @@ const TextStyle = styled.p`
           line-height: 24px;
         `
     }
-  }}
+  }};
 `
 
 export default TextStyle

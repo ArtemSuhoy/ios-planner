@@ -1,7 +1,11 @@
-import { ContainerStyle } from "."
+import { ContainerStyled } from "."
 const Container = props => {
-  const { children, size } = props
-  return <ContainerStyle size={size}>{children}</ContainerStyle>
+  const { children } = props
+  return (
+    <ContainerStyled data-testid="Container" {...props}>
+      {children}
+    </ContainerStyled>
+  )
 }
 
 export default Container

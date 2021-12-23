@@ -1,4 +1,5 @@
 import Switcher from "./Switcher"
-import SwitcherStyle from "./Switcher.style"
+import VARIANT_MAP from "./variantMap"
+import { SwitcherStyle, SwitcherWrapper } from "./Switcher.style"
 
-export { Switcher, SwitcherStyle }
+export { Switcher, SwitcherStyle, SwitcherWrapper, VARIANT_MAP }

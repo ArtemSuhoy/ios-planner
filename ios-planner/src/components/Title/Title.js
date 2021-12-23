@@ -1,9 +1,9 @@
 import { TitleStyle } from "."
 
 const Title = props => {
-  const { level, children } = props
+  const { children } = props
 
-  return <TitleStyle level={level}>{children}</TitleStyle>
+  return <TitleStyle {...props}>{children}</TitleStyle>
 }
 
 export default Title
