@@ -11,6 +11,10 @@ const reducer = (state, action) => {
     case "updateTaskList": {
       return action.payload
     }
+
+    case "takeDocument": {
+      return action.payload
+    }
     default:
       return state
   }

@@ -15,8 +15,8 @@ const CategoryForm = props => {
     if (e.key === "Enter") {
       setFormVisible(false)
       return createTaskList({
-        id: uuidv4(),
-        name: categoryName,
+        taskListId: uuidv4(),
+        taskListName: categoryName,
         tasks: [],
         createdAt: "1",
         updatedAt: "1",

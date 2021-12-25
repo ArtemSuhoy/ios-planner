@@ -27,8 +27,8 @@ const CategoryList = () => {
             {state.map(item => (
               <CategoryCombinedView
                 formVisible={setCategoryFormVisible}
-                id={item.id}>
-                {item.name}
+                id={item.taskListId}>
+                {item.taskListName}
               </CategoryCombinedView>
             ))}
 
