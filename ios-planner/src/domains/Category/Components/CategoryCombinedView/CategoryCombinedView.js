@@ -8,7 +8,8 @@ const CategoryCombinedView = props => {
   const { children, id } = props
   const { categoryMode, setCategoryMode } = useCategoryMode()
   const [inputValue, setInputValue] = useState()
-  const { deleteTaskList, updateTaskList } = useContext(PlannerContext)
+  const { deleteTaskList, updateTaskList, setCurrentCategory } =
+    useContext(PlannerContext)
 
   const updateTaskListText = e => {
     if (e.key === "Enter") {
@@ -19,11 +20,17 @@ const CategoryCombinedView = props => {
 
   return (
     <Row>
-      <CategoryCombinedViewWrapper id={id}>
+      <CategoryCombinedViewWrapper>
         <Col>
           <Row className="ai-center">
             <Col span="auto" className="pr-none">
-              <IconModule {...props}>
+              <IconModule
+                onClick={() =>
+                  setCurrentCategory({
+                    id,
+                    name: children,
+                  })
+                }>
                 <AiOutlineUnorderedList />
               </IconModule>
             </Col>
@@ -55,6 +62,7 @@ const CategoryCombinedView = props => {
             size="sm"
             className="p-none"
             onClick={() => {
+              setCurrentCategory(false)
               deleteTaskList(id)
             }}
           />

@@ -24,7 +24,7 @@ const CategoryList = () => {
 
         <Row fd-column="1" className="flex-1 fd-column">
           <Col className="px-xxl">
-            {state.map(item => (
+            {state.categories?.map(item => (
               <CategoryCombinedView
                 formVisible={setCategoryFormVisible}
                 id={item.taskListId}>

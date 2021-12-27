@@ -7,10 +7,6 @@ const PageWrapper = () => {
     <Row>
       <PageWrapperStyle>
         <Col>
-          <Header />
-        </Col>
-
-        <Col>
           <TaskList />
         </Col>
       </PageWrapperStyle>

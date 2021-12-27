@@ -2,7 +2,7 @@ import firestoreService from "services/firebase/firestoreService"
 
 const useDeleteTaskList = (state, dispatch) => {
   const deleteTaskList = deleteElementId => {
-    const shallowCopy = [...state]
+    const shallowCopy = [...state.categories]
     const filter = shallowCopy.filter(
       item => item.taskListId !== deleteElementId
     )

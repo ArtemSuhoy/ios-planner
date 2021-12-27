@@ -8,7 +8,7 @@ import { PlannerContext } from "contexts/Planner"
 
 const CategoryForm = props => {
   const { setFormVisible } = props
-  const { createTaskList } = useContext(PlannerContext)
+  const { createTaskList, currentCategory } = useContext(PlannerContext)
   const [categoryName, setCategoryName] = useState()
 
   const AddTaskListTitle = e => {
@@ -17,7 +17,7 @@ const CategoryForm = props => {
       return createTaskList({
         taskListId: uuidv4(),
         taskListName: categoryName,
-        tasks: [],
+        parentId: currentCategory,
         createdAt: "1",
         updatedAt: "1",
       })

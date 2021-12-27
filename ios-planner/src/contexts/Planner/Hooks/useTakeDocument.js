@@ -1,7 +1,9 @@
 const useTakeDocument = (state, dispatch) => {
   const takeDocument = collection => {
-    console.log("Collection", collection)
-    dispatch({ type: "takeDocument", payload: collection })
+    dispatch({
+      type: "takeDocument",
+      payload: { categories: collection.categories, tasks: collection.tasks },
+    })
   }
   return takeDocument
 }

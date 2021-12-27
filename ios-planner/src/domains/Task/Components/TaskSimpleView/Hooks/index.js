@@ -1,3 +1,3 @@
 import useEditMode from "./useEditMode"
-
-export { useEditMode }
+import useUpdateTaskName from "./useUpdateTaskName"
+export { useEditMode, useUpdateTaskName }
