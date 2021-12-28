@@ -4,7 +4,8 @@ import { CategoryList } from "domains/Category/Components/CategoryList"
 import { AiOutlineSearch } from "react-icons/ai"
 import { PlannerContext } from "../../contexts/Planner"
 
-const Sidebar = () => {
+const Sidebar = props => {
+  const { query } = props
   return (
     <Row className="fd-column height-100">
       <SidebarStyle data-testId="sidebar">
@@ -21,7 +22,7 @@ const Sidebar = () => {
 
           <Row className="flex-0">
             <Col>
-              <SwitcherGroup />
+              <SwitcherGroup query={query} />
             </Col>
           </Row>
 

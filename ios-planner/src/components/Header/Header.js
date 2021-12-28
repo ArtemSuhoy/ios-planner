@@ -2,7 +2,7 @@ import { HeaderWrapper } from "."
 import { Row, Col, Text, Title, Button } from "../"
 import { AiOutlinePlus } from "react-icons/ai"
 const Header = props => {
-  const { children } = props
+  const { children, counter } = props
   return (
     <Row>
       <Col>
@@ -28,7 +28,7 @@ const Header = props => {
 
           <Row className="ai-center jc-spaceBetween">
             <Col span="3">
-              <Text size="md">0 выполнены</Text>
+              <Text size="md">{counter} выполнены</Text>
             </Col>
 
             <Col span="auto">

@@ -16,7 +16,6 @@ const COUNTER_STYLE_MAP = {
   lg: `
     font-size: 20px;
     line-height: 24px;
-    color: #fff;
   `,
 }
 const CounterStyle = styled.div`

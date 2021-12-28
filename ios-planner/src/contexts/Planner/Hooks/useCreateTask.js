@@ -4,9 +4,7 @@ const useCreateTask = dispatch => {
   const createTask = task => {
     const payload = task
     firestoreService.createDocument("task", payload.taskId, {
-      taskId: payload.taskId,
-      taskName: payload.taskName,
-      parentId: payload.parentId,
+      ...task,
     })
     dispatch({ type: "createTask", payload: payload })
   }

@@ -1,4 +1,3 @@
-import { Children } from "react/cjs/react.production.min"
 import { CounterStyle } from "."
 
 const Counter = props => {

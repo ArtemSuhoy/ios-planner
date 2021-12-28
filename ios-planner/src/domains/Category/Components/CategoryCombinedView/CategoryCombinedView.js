@@ -8,7 +8,7 @@ const CategoryCombinedView = props => {
   const { children, id } = props
   const { categoryMode, setCategoryMode } = useCategoryMode()
   const [inputValue, setInputValue] = useState()
-  const { deleteTaskList, updateTaskList, setCurrentCategory } =
+  const { deleteTaskList, updateTaskList, setCurrentCategory, state } =
     useContext(PlannerContext)
 
   const updateTaskListText = e => {
@@ -18,6 +18,11 @@ const CategoryCombinedView = props => {
     }
   }
 
+  const taskCounter = () => {
+    let i = 0
+    state.tasks.map(item => item.parentId === id && i++)
+    return i
+  }
   return (
     <Row>
       <CategoryCombinedViewWrapper>
@@ -56,7 +61,7 @@ const CategoryCombinedView = props => {
         </Col>
 
         <Col span="auto" className="d-flex ai-center">
-          <Counter className="gray-lighten1">3</Counter>
+          <Counter className="gray-lighten1">{taskCounter()}</Counter>
           <Button
             icon={<AiOutlineClose />}
             size="sm"

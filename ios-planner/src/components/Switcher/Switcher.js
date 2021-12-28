@@ -3,11 +3,10 @@ import { Col, Row, IconModule, Counter } from "../"
 import { useActive } from "./Hooks"
 
 const Switcher = props => {
-  const { icon, counter, title, variant = "primary" } = props
-  const { status, setStatus } = useActive()
+  const { icon, counter, title, variant = "primary", status } = props
 
   return (
-    <SwitcherWrapper onClick={() => setStatus(!status)}>
+    <SwitcherWrapper>
       <SwitcherStyle variant={variant} isActive={status}>
         <Row className="jc-spaceBetween">
           <Col span={1}>
@@ -16,7 +15,7 @@ const Switcher = props => {
             </IconModule>
           </Col>
           <Col span={1} className=" d-flex">
-            <Counter size="lg">3 </Counter>
+            <Counter size="lg">{counter}</Counter>
           </Col>
         </Row>
         <Row>
