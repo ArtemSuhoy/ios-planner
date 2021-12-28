@@ -1,6 +1,5 @@
 import { SwitcherStyle, SwitcherWrapper } from "."
 import { Col, Row, IconModule, Counter } from "../"
-import { useActive } from "./Hooks"
 
 const Switcher = props => {
   const { icon, counter, title, variant = "primary", status } = props

@@ -45,7 +45,7 @@ const CategoryAdvancedView = () => {
           </Row>
           <Row>
             <Col>
-              <TaskSimpleForm />
+              <TaskSimpleForm parentId={currentCategory.id} />
             </Col>
           </Row>
         </Col>

@@ -5,8 +5,9 @@ import { v4 as uuidv4 } from "uuid"
 import { useContext } from "react"
 import { useInputValue } from "./Hooks"
 import { PlannerContext } from "contexts/Planner"
-const TaskSimpleForm = () => {
-  const { createTask, currentCategory } = useContext(PlannerContext)
+const TaskSimpleForm = props => {
+  const { parentId } = props
+  const { createTask } = useContext(PlannerContext)
   const { value, setValue } = useInputValue()
 
   const AddTask = e => {
@@ -19,7 +20,7 @@ const TaskSimpleForm = () => {
         taskNotes: "none",
         createAt: "",
         updateAt: "",
-        parentId: currentCategory.id,
+        parentId: parentId,
       })
       setValue("")
     }

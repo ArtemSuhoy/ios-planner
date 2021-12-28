@@ -1,15 +1,11 @@
 import { Row, Col, Header, Title } from "components"
-import {
-  TaskList,
-  CategoryAdvancedView,
-  TaskSimpleView,
-} from "domains/Task/Components"
-import { useContext, useState } from "react"
+import { TaskSimpleView, TaskSimpleForm } from "domains/Task/Components"
+import { useContext } from "react"
 import { PlannerContext } from "./../../contexts/Planner"
-const TaskAll = props => {
+const TaskAll = () => {
   const { state } = useContext(PlannerContext)
 
-  const AllTasks = state => {
+  const showTasksAll = state => {
     const result = state.categories.map(category => {
       let categoryId = category.taskListId
       let categoryName = category.taskListName
@@ -18,7 +14,9 @@ const TaskAll = props => {
           <Col>
             <Row>
               <Col>
-                <Title>{categoryName}</Title>
+                <Title color="--blue-default" className="fw-bold">
+                  {categoryName}
+                </Title>
               </Col>
             </Row>
             <Row>
@@ -34,6 +32,11 @@ const TaskAll = props => {
                     )
                   )
                 })}
+              </Col>
+            </Row>
+            <Row>
+              <Col>
+                <TaskSimpleForm parentId={categoryId} />
               </Col>
             </Row>
           </Col>
@@ -52,7 +55,7 @@ const TaskAll = props => {
           </Col>
         </Row>
         <Row>
-          <Col>{AllTasks(state)}</Col>
+          <Col>{showTasksAll(state)}</Col>
         </Row>
       </Col>
     </Row>

@@ -2,7 +2,6 @@ import { SidebarStyle } from "."
 import { Input, Col, Row, SwitcherGroup } from "../"
 import { CategoryList } from "domains/Category/Components/CategoryList"
 import { AiOutlineSearch } from "react-icons/ai"
-import { PlannerContext } from "../../contexts/Planner"
 
 const Sidebar = props => {
   const { query } = props
