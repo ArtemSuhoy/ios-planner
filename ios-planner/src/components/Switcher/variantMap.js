@@ -30,7 +30,7 @@ const VARIANT_MAP = {
 
     light: `
       background-color: #424345;
-      color: #fffffb;
+      color: #fffffd;
       `,
   },
 }

@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import { BsCircle, BsRecordCircle } from "react-icons/bs"
+import { AiFillFlag } from "react-icons/ai"
 
 const CheckboxWrapper = styled.label`
   display: flex;
@@ -26,8 +27,22 @@ const CheckboxChecked = styled(BsRecordCircle)`
 `
 
 const CheckboxUnchecked = styled(BsCircle)`
-  color: #959595;
+  color: var(--gray-darken1);
   font-size: 24px;
 `
 
-export { CheckboxStyle, CheckboxWrapper, CheckboxChecked, CheckboxUnchecked }
+const CheckboxFlagChecked = styled(AiFillFlag)`
+  color: var(--yellow-default);
+`
+const CheckboxFlagUnchecked = styled(AiFillFlag)`
+  color: var(--gray-darken1);
+`
+
+export {
+  CheckboxStyle,
+  CheckboxWrapper,
+  CheckboxChecked,
+  CheckboxUnchecked,
+  CheckboxFlagChecked,
+  CheckboxFlagUnchecked,
+}

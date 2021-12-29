@@ -1,13 +1,11 @@
 import { CheckboxStyle, CheckboxWrapper, CheckboxMap } from "."
-import { Row, Col } from ".."
-import { useCurrentIcon } from "./Hooks/useCurrentIcon"
 
 const Checkbox = props => {
-  const { currentIcon, setCurrentIcon } = useCurrentIcon()
+  const { condition, type = "default", onChange } = props
   return (
-    <CheckboxWrapper>
-      <CheckboxStyle onChange={() => setCurrentIcon(!currentIcon)} />
-      {CheckboxMap[currentIcon]}
+    <CheckboxWrapper onChange={onChange}>
+      <CheckboxStyle />
+      {CheckboxMap[type][condition]}
     </CheckboxWrapper>
   )
 }

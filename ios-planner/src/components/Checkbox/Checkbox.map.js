@@ -1,8 +1,19 @@
-import { CheckboxChecked, CheckboxUnchecked } from "."
+import {
+  CheckboxChecked,
+  CheckboxUnchecked,
+  CheckboxFlagChecked,
+  CheckboxFlagUnchecked,
+} from "."
 
 const CheckboxMap = {
-  false: <CheckboxChecked />,
-  true: <CheckboxUnchecked />,
+  default: {
+    true: <CheckboxChecked />,
+    false: <CheckboxUnchecked />,
+  },
+  flag: {
+    true: <CheckboxFlagChecked />,
+    false: <CheckboxFlagUnchecked />,
+  },
 }
 
 export default CheckboxMap

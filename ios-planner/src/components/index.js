@@ -1,3 +1,4 @@
+import { AppLayout } from "./AppLayout"
 import { Button } from "./Button"
 import { Checkbox } from "./Checkbox"
 import { Row, Col, Container } from "./Grid"
@@ -7,12 +8,13 @@ import { Sidebar } from "./Sidebar"
 import { Switcher } from "./Switcher"
 import { Text } from "./Text"
 import { Title } from "./Title"
-import { PageWrapper } from "./PageWrapper"
+import { PageLayout } from "./PageLayout"
 import { Header } from "./Header"
 import { SwitcherGroup } from "./SwitcherGroup"
 import { Counter } from "./Counter"
 
 export {
+  AppLayout,
   Button,
   Checkbox,
   Row,
@@ -24,7 +26,7 @@ export {
   Switcher,
   Text,
   Title,
-  PageWrapper,
+  PageLayout,
   Header,
   SwitcherGroup,
   Counter,

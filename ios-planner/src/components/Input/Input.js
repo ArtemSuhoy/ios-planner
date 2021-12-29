@@ -12,6 +12,7 @@ const Input = props => {
     autoFocus,
     onKeyDown,
     onChange,
+    value,
   } = props
 
   return (
@@ -24,6 +25,7 @@ const Input = props => {
         onBlur={onBlur}
         onChange={onChange}
         onKeyDown={onKeyDown}
+        value={value}
         maxLength="110"
       />
     </InputWrapper>

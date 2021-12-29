@@ -1,19 +1,27 @@
+import {
+  createTaskList,
+  takeDocument,
+  updateTaskList,
+  deleteTaskList,
+  createTask,
+  deleteTask,
+  updateTask,
+} from "."
+
 const reducer = (state, action) => {
-  switch (action.type) {
-    case "createTaskList": {
-      return [...state, action.payload]
-    }
+  const { type, payload } = action
 
-    case "deleteTaskList": {
-      return action.payload
-    }
-
-    case "updateTaskList": {
-      return action.payload
-    }
-    default:
-      return state
+  const actionsMap = {
+    createTaskList,
+    takeDocument,
+    updateTaskList,
+    deleteTaskList,
+    createTask,
+    deleteTask,
+    updateTask,
   }
+
+  return actionsMap[type](state, payload)
 }
 
 export { reducer }

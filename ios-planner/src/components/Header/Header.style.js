@@ -9,7 +9,7 @@ const HeaderWrapper = styled.div`
     position: absolute;
     content: " ";
     background-color: var(--gray-darken2);
-    width: 101%;
+    width: 100vw;
     height: 1px;
   }
 `

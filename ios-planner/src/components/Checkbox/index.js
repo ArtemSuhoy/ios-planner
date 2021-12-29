@@ -4,6 +4,8 @@ import {
   CheckboxWrapper,
   CheckboxChecked,
   CheckboxUnchecked,
+  CheckboxFlagChecked,
+  CheckboxFlagUnchecked,
 } from "./Checkbox.style"
 import CheckboxMap from "./Checkbox.map"
 
@@ -13,5 +15,7 @@ export {
   CheckboxWrapper,
   CheckboxChecked,
   CheckboxUnchecked,
+  CheckboxFlagChecked,
+  CheckboxFlagUnchecked,
   CheckboxMap,
 }

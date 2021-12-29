@@ -8,16 +8,16 @@ import { PlannerContext } from "contexts/Planner"
 
 const CategoryForm = props => {
   const { setFormVisible } = props
-  const { createTaskList } = useContext(PlannerContext)
+  const { createTaskList, currentCategory } = useContext(PlannerContext)
   const [categoryName, setCategoryName] = useState()
 
   const AddTaskListTitle = e => {
     if (e.key === "Enter") {
       setFormVisible(false)
       return createTaskList({
-        id: uuidv4(),
-        name: categoryName,
-        tasks: [],
+        taskListId: uuidv4(),
+        taskListName: categoryName,
+        parentId: currentCategory,
         createdAt: "1",
         updatedAt: "1",
       })

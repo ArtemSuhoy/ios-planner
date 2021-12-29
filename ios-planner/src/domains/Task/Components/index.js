@@ -1,4 +1,5 @@
 import { TaskSimpleForm } from "./TaskSImpleForm"
 import { TaskSimpleView } from "./TaskSimpleView"
-
-export { TaskSimpleForm, TaskSimpleView }
+import { TaskList } from "./TaskList"
+import { CategoryAdvancedView } from "./CategoryAdvancedView"
+export { TaskSimpleForm, TaskSimpleView, TaskList, CategoryAdvancedView }
