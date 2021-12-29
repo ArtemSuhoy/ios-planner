@@ -26,7 +26,8 @@ const TaskAll = () => {
                     categoryId === task.parentId && (
                       <TaskSimpleView
                         taskStatus={task.taskStatus}
-                        taskId={task.taskId}>
+                        taskId={task.taskId}
+                        taskFlag={task.taskFlag}>
                         {task.taskName}
                       </TaskSimpleView>
                     )
@@ -46,12 +47,20 @@ const TaskAll = () => {
     return result
   }
 
+  const completedTasksCounter = () => {
+    let i = 0
+    state.tasks.map(task => task.taskStatus === true && i++)
+    return i
+  }
+
   return (
     <Row>
       <Col>
         <Row>
           <Col>
-            <Header>All</Header>
+            <Header color="--blue-default" counter={completedTasksCounter()}>
+              All
+            </Header>
           </Col>
         </Row>
         <Row>

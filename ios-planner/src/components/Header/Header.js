@@ -2,7 +2,7 @@ import { HeaderWrapper } from "."
 import { Row, Col, Text, Title, Button } from "../"
 import { AiOutlinePlus } from "react-icons/ai"
 const Header = props => {
-  const { children, counter } = props
+  const { children, counter, color } = props
   return (
     <Row>
       <Col>
@@ -20,7 +20,7 @@ const Header = props => {
 
           <Row>
             <Col>
-              <Title level={1} color="--blue-default" className="fw-bold">
+              <Title level={1} className="fw-bold" color={color}>
                 {children}
               </Title>
             </Col>
@@ -32,7 +32,9 @@ const Header = props => {
             </Col>
 
             <Col span="auto">
-              <Button size="md">Show</Button>
+              <Button size="md" color={color}>
+                Show
+              </Button>
             </Col>
           </Row>
         </HeaderWrapper>

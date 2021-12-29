@@ -11,7 +11,10 @@ const TaskList = () => {
         {state.tasks.map(
           item =>
             currentCategory.id === item.parentId && (
-              <TaskSimpleView taskId={item.taskId} taskStatus={item.taskStatus}>
+              <TaskSimpleView
+                taskId={item.taskId}
+                taskStatus={item.taskStatus}
+                taskFlag={item.taskFlag}>
                 {item.taskName}
               </TaskSimpleView>
             )

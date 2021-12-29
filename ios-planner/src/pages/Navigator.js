@@ -1,7 +1,8 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
 import { AppLayout } from "components"
 import { CategoryAdvancedView } from "domains/Task/Components/CategoryAdvancedView"
-import { TaskAll } from "./TaskAll"
+import { TaskFlag, TaskAll } from "."
+
 const Navigator = () => {
   return (
     <Router>
@@ -23,7 +24,7 @@ const Navigator = () => {
         </Route>
 
         <Route path="/flags" exact>
-          <AppLayout query="/flags" />
+          <AppLayout query="/flags" content={<TaskFlag />} />
         </Route>
       </Switch>
     </Router>

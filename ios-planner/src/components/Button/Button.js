@@ -1,6 +1,6 @@
 import { Row, Col } from "../Grid"
 import { Text } from "../Text"
-import { ButtonStyled, IconWrapper, ButtonWrapper } from "."
+import { ButtonStyled, IconWrapper } from "."
 
 const Button = props => {
   const { children, icon, isHovered, isActive, size = "default" } = props

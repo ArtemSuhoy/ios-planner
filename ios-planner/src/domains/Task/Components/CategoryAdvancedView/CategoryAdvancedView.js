@@ -22,6 +22,7 @@ const CategoryAdvancedView = () => {
           <Row>
             <Col>
               <Header
+                color="--blue-default"
                 level={3}
                 className="fw-bold"
                 counter={completedTasksCounter()}>
@@ -36,7 +37,8 @@ const CategoryAdvancedView = () => {
                   currentCategory.id === item.parentId && (
                     <TaskSimpleView
                       taskId={item.taskId}
-                      taskStatus={item.taskStatus}>
+                      taskStatus={item.taskStatus}
+                      taskFlag={item.taskFlag}>
                       {item.taskName}
                     </TaskSimpleView>
                   )

@@ -7,7 +7,7 @@ import { PlannerContext } from "contexts/Planner"
 const TaskSimpleView = props => {
   const { mode, setMode } = useEditMode()
   const { updateValue, setUpdateValue } = useUpdateTaskName()
-  const { taskId, children, taskStatus } = props
+  const { taskId, children, taskStatus, taskFlag } = props
   const { deleteTask, updateTask } = useContext(PlannerContext)
 
   return (
@@ -15,7 +15,7 @@ const TaskSimpleView = props => {
       <TaskSimpleViewWrapper className="py-sm">
         <Col className="ai-center d-flex pr-md" span="auto">
           <Checkbox
-            taskCondition={taskStatus}
+            condition={taskStatus}
             onChange={() => updateTask(taskId, { taskStatus: !taskStatus })}
           />
         </Col>
@@ -40,7 +40,14 @@ const TaskSimpleView = props => {
                 />
               )}
             </Col>
-            <Col span="auto">
+            <Col span="auto" className="pr-none">
+              <Checkbox
+                type="flag"
+                condition={taskFlag}
+                onChange={() => updateTask(taskId, { taskFlag: !taskFlag })}
+              />
+            </Col>
+            <Col span="auto" className="pl-none">
               <Button
                 icon={<AiOutlineClose />}
                 onClick={() => deleteTask(taskId)}
